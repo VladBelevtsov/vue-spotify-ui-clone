@@ -1,7 +1,7 @@
 <template>
   <div class="Spotify">
     <Navbar />
-      <h1>Hello</h1>
+    <Home />
     <Player />
   </div>
 </template>
@@ -10,13 +10,15 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Navbar from './components/Navbar.vue'
 import Player from './components/Player.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Navbar,
-    Player
+    Player,
+    Home
   }
 }
 </script>
