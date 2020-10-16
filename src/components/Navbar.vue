@@ -20,12 +20,7 @@
         <li class="liked"><a href="#"><span><HeartIcon /></span> Liked Songs</a></li>
       </ul>
       <ul class="followlist">
-        <a href="#">1. Playlist</a>
-        <a href="#">2. Playlist</a>
-        <a href="#">3. Playlist</a>
-        <a href="#">4. Playlist</a>
-        <a href="#">5. Playlist</a>
-        <a href="#">6. Playlist</a>
+        <a :href="item.url" v-for="item in items" :key="item.title">{{ item.title }}</a>
       </ul>
     </div>
     <!-- Install -->
@@ -55,6 +50,18 @@ export default {
     PlusIcon,
     HeartIcon,
     Download
+  },
+  data() {
+    return {
+      items: [
+        {title: '1. Playlist', url: '#'},
+        {title: '2. Playlist', url: '#'},
+        {title: '3. Playlist', url: '#'},
+        {title: '4. Playlist', url: '#'},
+        {title: '5. Playlist', url: '#'},
+        {title: '6. Playlist', url: '#'},
+      ]
+    }
   }
 }
 </script>

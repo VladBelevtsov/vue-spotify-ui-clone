@@ -1,6 +1,9 @@
 <template>
   <div class="Categories">
-    <h3>Shortcuts</h3>
+    <div class="Categories-head">
+      <h3><a href="#">Shortcuts</a></h3>
+      <a href="#">See all</a>
+    </div>
     <div class="Categories-wrapp">
       <a v-for="item in items" :key="item.id" href="#" class="Categories-wrapp-card">
         <div class="Categories-wrapp-card-img">
@@ -71,10 +74,36 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .Categories {
-  h3 {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 22px;
+
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #B3B3B3;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    h3 {
+
+      &:hover a {
+        text-decoration: underline;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 22px;
+      }
+    }
   }
 
   &-wrapp {
